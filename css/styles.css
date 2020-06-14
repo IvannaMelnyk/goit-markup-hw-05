@@ -286,6 +286,7 @@ img {
   flex-wrap: nowrap;
 }
 .specialization-list .item {
+  position: relative;
   width: 370px;
 
   margin-right: 30px;
@@ -294,13 +295,21 @@ img {
   margin-right: 0;
 }
 .specialization-list .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 370px;
+  height: 70px;
+
   margin: 0;
   text-align: center;
   padding: 27px;
   border-radius: 0px 0px 4px 4px;
+  background: rgba(47, 48, 58, 0.8);
+  
 }
 .specialization-list .link {
-  color: var(--title-text-color);
+  color: var(--white-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -312,6 +321,7 @@ img {
 .specialization-list .item:focus {
   color: var(--accent-color);
 }
+
 
 /* Staff */
 .section.staff {

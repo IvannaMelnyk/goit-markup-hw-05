@@ -576,6 +576,19 @@ background:rgba(255, 255, 255, 0.1);
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.fon {
+  position: relative;
+  /* overflow: hidden; */
+}
+.fon::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+}
 .portfolio-list .item:nth-child(3n) {
   margin-right: 0;
 }
@@ -583,14 +596,29 @@ background:rgba(255, 255, 255, 0.1);
   margin-bottom: 0;
 }
 .portfolio-list .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  opacity: 0;
+  padding: 63px 24px;
+
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--title-text-color);
+  color: var(--white-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
+}
+.text:hover {
+   opacity: 1;
 
-  display: none;
+}
+.fon:hover::before {
+  opacity: 1;
 }
 .portfolio-list .title {
   color: var(--title-text-color);
